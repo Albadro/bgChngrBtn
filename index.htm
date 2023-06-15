@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .buttons {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            display: block;
+            margin: 0.8%;
+            width: 30%;
+            height: 9%;
+            transition: filter 1s ease;
+            /* Transition property for smooth effect */
+            border: none;
+            border-bottom: 30% dashed white;
+        }
+
+        button:hover {
+            filter: brightness(0.8)
+        }
+
+        .black {
+            background-color: rgb(50, 50, 50);
+        }
+    </style>
+    <script>
+        function black() {
+            document.body.style.backgroundColor = "black";
+        }
+        function white() {
+            document.body.style.backgroundColor = "white";
+        }
+        function random() {
+            const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            document.body.style.backgroundColor = "#" + randomColor;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="buttons">
+        <button class="black" onclick="black()">Black</button>
+        <button class="white" onclick="white()">White</button>
+        <button class="random" onclick="random()">Random</button>
+    </div>
+</body>
+
+</html>
